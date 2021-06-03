@@ -51,7 +51,7 @@ while true; do
 		*"apt"*|*"atualize"*|*"atalizar"*)	
 			DADO="$(( $RANDOM % 3 ))" 
 			apt-get update
-			apt-get upgrade  -y 
+			apt-get upgrade -y 
 		;;	
 	esac
 
