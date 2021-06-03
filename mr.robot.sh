@@ -43,6 +43,7 @@ while true; do
 		*"nmap"*|*"mapear"*|*"portas abertas"*)	
 			DADO="$(( $RANDOM % 3 ))" 
 			nmap -sS "${sites[$DADO]}"
+		;;
 		*"ssh"*|*"conect"*|*"remoto"*)	
 			DADO="$(( $RANDOM % 3 ))" 
 			ssh -l root "${openssh[$DADO]}"
