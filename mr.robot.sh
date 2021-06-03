@@ -1,5 +1,5 @@
 #!/bin/bash
-#decimo.sh - Nosso oitavoo  programa em shell - Hachear site em shell
+#Mr.Robot  - Nosso robo  em shell - Hachear site em shell
 #
 #####MISTER ROBOT
 #
@@ -45,7 +45,12 @@ while true; do
 			nmap -sS "${sites[$DADO]}"
 		*"ssh"*|*"conect"*|*"remoto"*)	
 			DADO="$(( $RANDOM % 3 ))" 
-			ssh  "${sites[$DADO]}"
+			ssh  -l root "${openssh[$DADO]}"
+		;;	
+		*"apt"*|*"atualize"*|*"atalizar"*)	
+			DADO="$(( $RANDOM % 3 ))" 
+			apt-get update
+			apt-get upgrade  -y 
 		;;	
 	esac
 
